@@ -18,7 +18,7 @@ Link da plalist de estudos: [https://youtu.be/XLV416Gjl4g?si=V_ZD-LQ5_gC4pyQq](h
 ### 3ª Etapa: Construção da ontologia
 A contrução ontológica utilizou como base duas ontologias já consolidadas. A primeira foi inspirada no mapeamento de estudos científicos apresentado por Verma et al. (2023), enquanto a segunda, denominada OpenAIRE Graph (Manghi et al. 2023), fornece uma estrutura voltada à representação de softwares e conjuntos de dados, enriquecendo os estudos com informações sobre ferramentas, dados e linguagens utilizadas. Com base nessas referências, foram identificadas as principais entidades e seus relacionamentos, organizando-se esse conhecimento por meio da ferramenta Protégé. Está em RDF no arquivo `ontologia.rdf` . E sua estrutura gráfica está representada da segunte forma:
 
-![Ontology GRAFTAE](img/screenshot.png)
+![Ontology GRAFTAE](ontologua.drawio)
 
 ### 4º Etapa: Mapenado informações na ontologia
 Para mapear e adicionar instâncias ao grafo, desenvolvemos um script em linguagem Python `scripts/gerar_grafo_publicacoes.py` que extrai e organiza informações de artigos científicos que foram anteriormente armazenadas em planilhas no formato CSV. Após a extração dos arquivos, realizamos a normalização dos textos para garantir a criação de URIs consistentes. Os dados coletados foram estruturados em formato de triplas RDF, representando os relacionamentos entre as entidades conforme o modelo ontológico. O grafo seguiu o padrão RDF, que possibilita consultas semânticas por meio da linguagem SPARQL. Para armazenamento e visualizacão, utilizamos uma ferramenta consolidada, denominada GraphDB.
