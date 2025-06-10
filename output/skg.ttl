@@ -1,0 +1,1042 @@
+@prefix ont: <http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25> a owl:Ontology .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Programming_Language> a owl:DatatypeProperty ;
+    rdfs:domain ont:Software ;
+    rdfs:range xsd:string .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#authored> a owl:ObjectProperty ;
+    rdfs:comment "Indicates that an author wrote or contributed to a publication"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:Publication ;
+    owl:equivalentProperty ont:written_by .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#chairs_or_reviewer> a owl:ObjectProperty ;
+    rdfs:comment "Indicates that an author chairs or reviews for a venue (conference/journal)"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:Venue .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_affiliation_with> a owl:ObjectProperty ;
+    rdfs:comment "Links an author to their affiliated institution"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:Institution ;
+    owl:inverseOf ont:is_affiliated_in .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_citation> a owl:ObjectProperty ;
+    rdfs:comment "Indicates that a publication cites another publication"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range ont:Publication .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_doi> a owl:ObjectProperty ;
+    rdfs:comment "Links a publication to its Digital Object Identifier (DOI)"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range <http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#DOI> .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_summary> a owl:ObjectProperty ;
+    rdfs:comment "Links a publication to its textual summary/abstract"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range <http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Summary> .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_thematic> a owl:ObjectProperty ;
+    rdfs:comment "Indicates the primary thematic category of a publication"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range <http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Thematic> .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#hosts_venue> a owl:ObjectProperty ;
+    rdfs:comment "Indicates that an institution hosts a conference/journal"@en ;
+    rdfs:domain ont:Institution ;
+    rdfs:range ont:Venue .
+
+ont:Box a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf ont:Geolocalization .
+
+ont:Code_Repository_Url a owl:DatatypeProperty ;
+    rdfs:domain ont:Software .
+
+ont:Documentation_Urls a owl:DatatypeProperty ;
+    rdfs:domain ont:Software .
+
+ont:Formato a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string .
+
+ont:Place a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf ont:Geolocalization .
+
+ont:Point a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf ont:Geolocalization .
+
+ont:Size a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string .
+
+ont:Version a owl:DatatypeProperty ;
+    rdfs:domain ont:Data ;
+    rdfs:range xsd:string .
+
+ont:a_collaborative_virtual_reality_supermarket_training_application_to_teach_shopping_skills_to_young_individuals_with_autism_spectrum_disorder a ont:Publication ;
+    ont:written_by ont:adjorlu,
+        ont:ali,
+        ont:lui_albk,
+        ont:thomsen .
+
+ont:a_multimodal_conversational_interface_to_support_the_creation_of_customized_social_stories_for_people_with_asd a ont:Publication ;
+    ont:written_by ont:angela,
+        ont:bhati,
+        ont:deepshikha,
+        ont:francese,
+        ont:guercio,
+        ont:rita,
+        ont:rossano,
+        ont:veronica .
+
+ont:a_serious_game_to_support_learning_and_minimize_the_social_isolation_of_children_with_autism a ont:Publication ;
+    ont:written_by ont:a_f_sousa,
+        ont:a_s,
+        ont:andrade,
+        ont:de_lima,
+        ont:domingues,
+        ont:f_m_mendes,
+        ont:j_c_pereira,
+        ont:junior,
+        ont:n_f_silva,
+        ont:neto,
+        ont:p_alencar,
+        ont:r_m,
+        ont:r_v_santos,
+        ont:s_dantas,
+        ont:silva .
+
+ont:a_vr_intervention_based_on_social_story_to_develop_social_skills_in_children_with_asd a ont:Publication ;
+    ont:written_by ont:conor,
+        ont:keighrey,
+        ont:murray,
+        ont:niall,
+        ont:yujing,
+        ont:zhang .
+
+ont:a_vr_intervention_to_develop_social_skills_in_children_with_asd_an_expert_evaluation a ont:Publication ;
+    ont:written_by ont:conor,
+        ont:keighrey,
+        ont:murray,
+        ont:niall,
+        ont:yujing,
+        ont:zhang .
+
+ont:cave_automatic_virtual_environment_technology_to_enhance_social_participation_of_autistic_people_a_classification_and_literature_review a ont:Publication ;
+    ont:written_by ont:isabelle_dabat_pivotto,
+        ont:vitor_matias,
+        ont:william_de_paula_ferreira .
+
+ont:co_topics a owl:ObjectProperty ;
+    rdfs:comment "Indicates a semantic relationship between research topics"@en ;
+    rdfs:domain ont:Topics ;
+    rdfs:range ont:Topics .
+
+ont:cogui_interactive_social_robot_for_autism_spectrum_disorder_children_a_wonderful_partner_for_asd_children a ont:Publication ;
+    ont:written_by ont:adrian,
+        ont:anhuaman,
+        ont:carlos,
+        ont:granados,
+        ont:meza,
+        ont:raez,
+        ont:roberto,
+        ont:william .
+
+ont:combining_computational_thinking_and_chibitronics_and_makey_makey_to_develop_a_social_story_teaching_aid_system_to_improve_social_reciprocity_and_emotional_expression_skills_for_autistic_children a ont:Publication ;
+    ont:written_by ont:kang,
+        ont:li,
+        ont:xin,
+        ont:xinzhu .
+
+ont:dc_a_mobile_intervention_to_promote_social_skills_in_children_with_autism_spectrum_disorder_using_ar_face_masks a ont:Publication ;
+    ont:written_by ont:hiroshika,
+        ont:premarathne .
+
+ont:deep_learning_to_interpret_autism_spectrum_disorder_behind_the_camera a ont:Publication ;
+    ont:written_by ont:ming_jiang,
+        ont:qi_zhao,
+        ont:shi_chen .
+
+ont:designing_a_customizable_picturebased_augmented_reality_application_for_therapists_and_educational_professionals_working_in_autistic_contexts a ont:Publication ;
+    ont:written_by ont:ahsen,
+        ont:amanda,
+        ont:christina,
+        ont:crehan,
+        ont:dogar,
+        ont:dylan,
+        ont:eileen_t,
+        ont:fahad,
+        ont:howard_c,
+        ont:obrien,
+        ont:oeschemmel,
+        ont:ralf_w,
+        ont:schlosser,
+        ont:shane,
+        ont:tooacba,
+        ont:yu .
+
+ont:designing_a_virtual_talking_companion_to_support_the_socialemotional_learning_of_children_with_asd a ont:Publication ;
+    ont:written_by ont:christianne_marie,
+        ont:christianne_marie_vinco,
+        ont:ethel,
+        ont:ethel_ong,
+        ont:gagan,
+        ont:isser_troy_gagan,
+        ont:isser_troy_mangin,
+        ont:ivy,
+        ont:ivy_tan,
+        ont:maria_angela_mikaela_eusebio,
+        ont:maria_angela_mikaela_matias,
+        ont:matias,
+        ont:ong,
+        ont:resurreccion,
+        ont:ron,
+        ont:ron_resurreccion,
+        ont:tan,
+        ont:vinco .
+
+ont:do_children_with_autism_benefit_from_educational_interventions_utilizing_a_tangible_interface_and_audioaugmented_drawings a ont:Publication ;
+    ont:written_by ont:alessandrini,
+        ont:andrea .
+
+ont:effectiveness_of_a_mixed_reality_system_in_terms_of_social_interaction_behaviors_in_children_with_and_without_autism_spectrum_condition a ont:Publication ;
+    ont:written_by ont:,
+        ont:batuhan_sayis,
+        ont:narcis_pares,
+        ont:olga_galiperez .
+
+ont:emoeden_applying_generative_artificial_intelligence_to_emotional_learning_for_children_with_highfunction_autism a ont:Publication ;
+    ont:written_by ont:cai,
+        ont:chen,
+        ont:du,
+        ont:fan,
+        ont:lingyun,
+        ont:liuqing,
+        ont:sun,
+        ont:tang,
+        ont:wenkai,
+        ont:yang,
+        ont:yao,
+        ont:yilin,
+        ont:yu,
+        ont:ziyu .
+
+ont:enhancing_preemployment_transition_services_a_type_1_hybrid_randomized_controlled_trial_protocol_for_evaluating_workchat_a_virtual_workday_among_autistic_transitionage_youth a ont:Publication ;
+    ont:written_by ont:apara_sharma,
+        ont:brandi_sinco,
+        ont:brittany_ross,
+        ont:caleb_liggett,
+        ont:cheryl_brown,
+        ont:chris_steacy,
+        ont:connie_sung,
+        ont:dale_olsen,
+        ont:david_kearon,
+        ont:david_telfer,
+        ont:eddee_williams,
+        ont:edwina_riddle,
+        ont:jane_k_burkemiller,
+        ont:jeff_elkins,
+        ont:justin_d_smith,
+        ont:justine_bond,
+        ont:kara_hume,
+        ont:kari_sherwood,
+        ont:laura_humm,
+        ont:mary_bakerericzen,
+        ont:matthew_j_smith,
+        ont:meghan_harrington,
+        ont:sagun_sharma,
+        ont:sandra_magana,
+        ont:sarah_dababnah,
+        ont:sen_toda,
+        ont:shanna_k_kattari,
+        ont:shaun_m_eack,
+        ont:shelby_morrow,
+        ont:tamara_dawkins,
+        ont:temple_lovelace,
+        ont:tikia_watkins .
+
+ont:evaluation_of_the_use_of_realtime_3d_graphics_to_augment_therapeutic_music_sessions_for_young_people_on_the_autism_spectrum a ont:Publication ;
+    ont:written_by ont:gregory,
+        ont:iain,
+        ont:john_j,
+        ont:leplatre,
+        ont:mcgowan,
+        ont:mcgregor .
+
+ont:extended_reality_xr_and_telehealth_interventions_for_children_or_adolescents_with_autism_spectrum_disorder_systematic_review_of_qualitative_and_quantitative_studies a ont:Publication ;
+    ont:written_by ont:denzel_dhaidhai,
+        ont:min_cao,
+        ont:min_liu,
+        ont:peng_xiong,
+        ont:weixin_yang,
+        ont:xiao_yang,
+        ont:yuhan_chen,
+        ont:zhihao_lin,
+        ont:zhuoren_zhou .
+
+ont:faceme_an_agentbased_social_game_using_augmented_reality_for_the_emotional_development_of_children_with_autism_spectrum_disorder a ont:Publication ;
+    ont:written_by ont:jiajia_li,
+        ont:xi_li,
+        ont:xing_wei,
+        ont:yaqing_chai,
+        ont:zixia_zheng .
+
+ont:facial_expression_recognition_fer_of_autism_children_using_deep_neural_networks a ont:Publication ;
+    ont:written_by ont:ahmad_falih_alallaf,
+        ont:noor_m_abdullah .
+
+ont:gazebased_anxiety_sensitive_virtual_social_communication_platform_for_individuals_with_autism a ont:Publication ;
+    ont:written_by ont:krishnappa_babu,
+        ont:lahiri,
+        ont:pradeep_raj,
+        ont:uttama .
+
+ont:has_coauthor a owl:ObjectProperty ;
+    rdfs:comment "Links an author to their collaborators"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:Author .
+
+ont:has_issn a owl:ObjectProperty ;
+    rdfs:comment "Links a publication to its International Standard Serial Number"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range ont:ISSN .
+
+ont:has_orcid a owl:ObjectProperty ;
+    rdfs:comment "Links an author to their ORCID identifier"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:ORCID .
+
+ont:has_topics a owl:ObjectProperty ;
+    rdfs:comment "Links a publication to its research topics"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range ont:Topics .
+
+ont:i_feel_like_hes_looking_in_the_computer_world_to_be_social_but_i_cant_trust_his_judgement_reimagining_parental_control_for_children_with_asd a ont:Publication ;
+    ont:written_by ont:alameen,
+        ont:audrey,
+        ont:bryson_d,
+        ont:dumaru,
+        ont:flood,
+        ont:hackler,
+        ont:mahdi_nasrullah,
+        ont:prakriti .
+
+ont:incloodleclassroom_technology_for_inclusive_joint_media_engagement_in_a_neurodiverse_kindergarten_classroom a ont:Publication ;
+    ont:written_by ont:behbakht,
+        ont:das,
+        ont:julie_a,
+        ont:kientz,
+        ont:kiley,
+        ont:maitraye,
+        ont:sara,
+        ont:sobel .
+
+ont:is_published_in a owl:ObjectProperty ;
+    rdfs:comment "Links a publication to its venue (journal/conference)"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range ont:Venue .
+
+ont:jammo_virtual_robot_enhances_the_social_skills_of_children_with_hfa_development_and_deployment a ont:Publication ;
+    ont:written_by ont:abdelmohsen,
+        ont:arafa,
+        ont:maha,
+        ont:yasmine .
+
+ont:narrating_routines_through_game_dynamics_impact_of_a_gamified_routine_management_app_for_autistic_individuals a ont:Publication ;
+    ont:written_by ont:bogoan_kim,
+        ont:dayoung_jeong,
+        ont:hwajung_hong,
+        ont:kyungsik_han .
+
+ont:pepe_an_adaptive_robot_that_helps_children_with_autism_to_plan_and_selfmanage_their_day a ont:Publication ;
+    ont:written_by ont:henrik_svarrer_larsen,
+        ont:maria_estela_peralta_alvarez,
+        ont:raquel_canete_yaque .
+
+ont:photographs_and_parent_training_to_support_conversations_about_past_events_between_caregivers_and_children_with_autism a ont:Publication ;
+    ont:written_by ont:atikah_bagawan,
+        ont:ciara_ousley,
+        ont:naima_bhana,
+        ont:tracy_j_raulston .
+
+ont:preparing_children_with_level_1_asd_for_social_interactions_through_storytelling_with_amy_an_exploratory_study a ont:Publication ;
+    ont:written_by ont:christianne_marie,
+        ont:ethel,
+        ont:gagan,
+        ont:isser_troy,
+        ont:ivy,
+        ont:maria_angela_mikaela,
+        ont:matias,
+        ont:ong,
+        ont:tan,
+        ont:vinco .
+
+ont:remote_learning_for_children_with_special_education_needs_in_the_era_of_covid19_beyond_teleconferencing_sessions a ont:Publication ;
+    ont:written_by ont:panagiotis_koulouvarisb,
+        ont:simeao_retalisa,
+        ont:tania_chasiotoua,
+        ont:theodoros_daviotisb,
+        ont:valeria_aloizoua .
+
+ont:repurposing_a_smartwatch_to_support_individuals_with_autism_spectrum_disorder_sensory_and_operational_considerations a ont:Publication ;
+    ont:written_by ont:amanda_m_obrien,
+        ont:anna_a_allen,
+        ont:christina_yu,
+        ont:howard_c_shane,
+        ont:ralf_w_schlosser .
+
+ont:sounds_of_play_designing_augmented_toys_for_children_with_autism a ont:Publication ;
+    ont:written_by ont:arman__nikkhah_dehnavi,
+        ont:carlos_henrique_araujo_de_aguiar,
+        ont:maryam_jahadakbar,
+        ont:mona__ghandi .
+
+ont:teacher_perceptions_on_the_use_of_digital_storytelling_among_autism_spectrum_disorder_children_in_malaysia a ont:Publication ;
+    ont:written_by ont:mariam,
+        ont:mohamad .
+
+ont:technologybased_selfmonitoring_and_visual_supports_to_teach_question_asking_skills_to_young_adults_with_autism_in_community_settings a ont:Publication ;
+    ont:has_software ont:httpsplaygooglecomstoreappsdetailsidcomiconnectku ;
+    ont:written_by ont:ashley_anderson,
+        ont:jessica_g_rousey,
+        ont:jonathan_m_huffman,
+        ont:leslie_ann_bross,
+        ont:mashael_alhibs,
+        ont:monique_pinczynski .
+
+ont:the_effects_of_an_educational_program_based_on_modeling_and_social_stories_on_improvements_in_the_social_skills_of_students_with_autism a ont:Publication ;
+    ont:written_by ont:anabela_pereira,
+        ont:issa_alkinj,
+        ont:paula_coelho_santos .
+
+ont:training_social_skills_of_children_with_asd_through_social_virtual_robot a ont:Publication ;
+    ont:written_by ont:abdelmohsen,
+        ont:arafa,
+        ont:maha,
+        ont:yasmine .
+
+ont:use_of_eye_behavior_with_visual_distraction_for_attention_training_in_vr a ont:Publication ;
+    ont:written_by ont:chao_mei,
+        ont:pranathi_ayyalaraju_ramalakshmi,
+        ont:sungchul_jung,
+        ont:yi_alegria_li .
+
+ont:use_of_sensory_adaptive_environments_with_autistic_children_a_scoping_review a ont:Publication ;
+    ont:written_by ont:emma_duryea,
+        ont:kadria_d_simms,
+        ont:kathleen_f_lawlor,
+        ont:kathleen_greaney,
+        ont:kathryn_l_williams,
+        ont:lady_riosvega,
+        ont:natalie_r_schiano,
+        ont:rachel_kim,
+        ont:rachel_l_dumont,
+        ont:roseann_c_schaaf .
+
+ont:using_a_visual_support_package_to_facilitate_independent_leisure_engagement_and_choicemaking_for_individuals_with_moderate_to_severe_autism_in_taiwan a ont:Publication ;
+    ont:written_by ont:chenya_juan,
+        ont:chienhuey_chang,
+        ont:ge_shan,
+        ont:huiting_wang .
+
+ont:visual_supports_to_increase_conversation_engagement_for_preschoolers_with_autism_spectrum_disorder_during_mealtimes_an_initial_investigation a ont:Publication ;
+    ont:written_by ont:ariane_gauvreau,
+        ont:katherine_j_bateman,
+        ont:katherine_matthews,
+        ont:maggie_gucwa,
+        ont:micah_mazurek,
+        ont:rose_nevill,
+        ont:sarah_emily_wilson,
+        ont:william_therrien .
+
+ont:wing_visual_support_device_for_children_with_autism_spectrum_disorder a ont:Publication ;
+    ont:written_by ont:alvaro_costa,
+        ont:amanda_fernandes,
+        ont:hugo_silva,
+        ont:oriana_comesanha,
+        ont:raphael_comesanha .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#DOI> a owl:Class ;
+    rdfs:label "DOI"@en ;
+    rdfs:comment "Persistent identifier for digital content"@en .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Summary> a owl:Class ;
+    rdfs:label "Abstract"@en ;
+    rdfs:comment "Concise description of a publication's content"@en .
+
+<http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Thematic> a owl:Class ;
+    rdfs:label "Thematic"@en ;
+    rdfs:comment "Primary thematic classification of a publication"@en .
+
+ont: a ont:Author .
+
+ont:Affiliation a owl:Class ;
+    rdfs:label "Affiliation"@en ;
+    rdfs:comment "Formal relationship between an author and an institution"@en .
+
+ont:ISSN a owl:Class ;
+    rdfs:label "ISSN"@en ;
+    rdfs:comment "Unique identifier for journals and periodicals"@en .
+
+ont:ORCID a owl:Class ;
+    rdfs:label "ORCID"@en ;
+    rdfs:comment "Persistent identifier for academic authors"@en .
+
+ont:a_f_sousa a ont:Author .
+
+ont:a_s a ont:Author .
+
+ont:adjorlu a ont:Author .
+
+ont:adrian a ont:Author .
+
+ont:ahmad_falih_alallaf a ont:Author .
+
+ont:ahsen a ont:Author .
+
+ont:alameen a ont:Author .
+
+ont:alessandrini a ont:Author .
+
+ont:ali a ont:Author .
+
+ont:alvaro_costa a ont:Author .
+
+ont:amanda a ont:Author .
+
+ont:amanda_fernandes a ont:Author .
+
+ont:amanda_m_obrien a ont:Author .
+
+ont:anabela_pereira a ont:Author .
+
+ont:andrade a ont:Author .
+
+ont:andrea a ont:Author .
+
+ont:angela a ont:Author .
+
+ont:anhuaman a ont:Author .
+
+ont:anna_a_allen a ont:Author .
+
+ont:apara_sharma a ont:Author .
+
+ont:ariane_gauvreau a ont:Author .
+
+ont:arman__nikkhah_dehnavi a ont:Author .
+
+ont:ashley_anderson a ont:Author .
+
+ont:atikah_bagawan a ont:Author .
+
+ont:audrey a ont:Author .
+
+ont:batuhan_sayis a ont:Author .
+
+ont:behbakht a ont:Author .
+
+ont:bhati a ont:Author .
+
+ont:bogoan_kim a ont:Author .
+
+ont:brandi_sinco a ont:Author .
+
+ont:brittany_ross a ont:Author .
+
+ont:bryson_d a ont:Author .
+
+ont:cai a ont:Author .
+
+ont:caleb_liggett a ont:Author .
+
+ont:carlos a ont:Author .
+
+ont:carlos_henrique_araujo_de_aguiar a ont:Author .
+
+ont:chao_mei a ont:Author .
+
+ont:chen a ont:Author .
+
+ont:chenya_juan a ont:Author .
+
+ont:cheryl_brown a ont:Author .
+
+ont:chienhuey_chang a ont:Author .
+
+ont:chris_steacy a ont:Author .
+
+ont:christianne_marie_vinco a ont:Author .
+
+ont:christina a ont:Author .
+
+ont:christina_yu a ont:Author .
+
+ont:ciara_ousley a ont:Author .
+
+ont:connie_sung a ont:Author .
+
+ont:crehan a ont:Author .
+
+ont:dale_olsen a ont:Author .
+
+ont:das a ont:Author .
+
+ont:david_kearon a ont:Author .
+
+ont:david_telfer a ont:Author .
+
+ont:dayoung_jeong a ont:Author .
+
+ont:de_lima a ont:Author .
+
+ont:deepshikha a ont:Author .
+
+ont:denzel_dhaidhai a ont:Author .
+
+ont:dogar a ont:Author .
+
+ont:domingues a ont:Author .
+
+ont:du a ont:Author .
+
+ont:dumaru a ont:Author .
+
+ont:dylan a ont:Author .
+
+ont:eddee_williams a ont:Author .
+
+ont:edwina_riddle a ont:Author .
+
+ont:eileen_t a ont:Author .
+
+ont:emma_duryea a ont:Author .
+
+ont:ethel_ong a ont:Author .
+
+ont:f_m_mendes a ont:Author .
+
+ont:fahad a ont:Author .
+
+ont:fan a ont:Author .
+
+ont:flood a ont:Author .
+
+ont:francese a ont:Author .
+
+ont:ge_shan a ont:Author .
+
+ont:granados a ont:Author .
+
+ont:gregory a ont:Author .
+
+ont:guercio a ont:Author .
+
+ont:hackler a ont:Author .
+
+ont:henrik_svarrer_larsen a ont:Author .
+
+ont:hiroshika a ont:Author .
+
+ont:howard_c a ont:Author .
+
+ont:howard_c_shane a ont:Author .
+
+ont:httpsplaygooglecomstoreappsdetailsidcomiconnectku a ont:Software .
+
+ont:hugo_silva a ont:Author .
+
+ont:huiting_wang a ont:Author .
+
+ont:hwajung_hong a ont:Author .
+
+ont:iain a ont:Author .
+
+ont:is_affiliated_in a owl:ObjectProperty ;
+    rdfs:comment "Indicates an author's institutional affiliation"@en ;
+    rdfs:domain ont:Author ;
+    rdfs:range ont:Affiliation .
+
+ont:isabelle_dabat_pivotto a ont:Author .
+
+ont:issa_alkinj a ont:Author .
+
+ont:isser_troy a ont:Author .
+
+ont:isser_troy_gagan a ont:Author .
+
+ont:isser_troy_mangin a ont:Author .
+
+ont:ivy_tan a ont:Author .
+
+ont:j_c_pereira a ont:Author .
+
+ont:jane_k_burkemiller a ont:Author .
+
+ont:jeff_elkins a ont:Author .
+
+ont:jessica_g_rousey a ont:Author .
+
+ont:jiajia_li a ont:Author .
+
+ont:john_j a ont:Author .
+
+ont:jonathan_m_huffman a ont:Author .
+
+ont:julie_a a ont:Author .
+
+ont:junior a ont:Author .
+
+ont:justin_d_smith a ont:Author .
+
+ont:justine_bond a ont:Author .
+
+ont:kadria_d_simms a ont:Author .
+
+ont:kang a ont:Author .
+
+ont:kara_hume a ont:Author .
+
+ont:kari_sherwood a ont:Author .
+
+ont:katherine_j_bateman a ont:Author .
+
+ont:katherine_matthews a ont:Author .
+
+ont:kathleen_f_lawlor a ont:Author .
+
+ont:kathleen_greaney a ont:Author .
+
+ont:kathryn_l_williams a ont:Author .
+
+ont:kientz a ont:Author .
+
+ont:kiley a ont:Author .
+
+ont:krishnappa_babu a ont:Author .
+
+ont:kyungsik_han a ont:Author .
+
+ont:lady_riosvega a ont:Author .
+
+ont:lahiri a ont:Author .
+
+ont:laura_humm a ont:Author .
+
+ont:leplatre a ont:Author .
+
+ont:leslie_ann_bross a ont:Author .
+
+ont:li a ont:Author .
+
+ont:lingyun a ont:Author .
+
+ont:liuqing a ont:Author .
+
+ont:lui_albk a ont:Author .
+
+ont:maggie_gucwa a ont:Author .
+
+ont:mahdi_nasrullah a ont:Author .
+
+ont:maitraye a ont:Author .
+
+ont:maria_angela_mikaela a ont:Author .
+
+ont:maria_angela_mikaela_eusebio a ont:Author .
+
+ont:maria_angela_mikaela_matias a ont:Author .
+
+ont:maria_estela_peralta_alvarez a ont:Author .
+
+ont:mariam a ont:Author .
+
+ont:mary_bakerericzen a ont:Author .
+
+ont:maryam_jahadakbar a ont:Author .
+
+ont:mashael_alhibs a ont:Author .
+
+ont:matthew_j_smith a ont:Author .
+
+ont:mcgowan a ont:Author .
+
+ont:mcgregor a ont:Author .
+
+ont:meghan_harrington a ont:Author .
+
+ont:meza a ont:Author .
+
+ont:micah_mazurek a ont:Author .
+
+ont:min_cao a ont:Author .
+
+ont:min_liu a ont:Author .
+
+ont:ming_jiang a ont:Author .
+
+ont:mohamad a ont:Author .
+
+ont:mona__ghandi a ont:Author .
+
+ont:monique_pinczynski a ont:Author .
+
+ont:n_f_silva a ont:Author .
+
+ont:naima_bhana a ont:Author .
+
+ont:narcis_pares a ont:Author .
+
+ont:natalie_r_schiano a ont:Author .
+
+ont:neto a ont:Author .
+
+ont:noor_m_abdullah a ont:Author .
+
+ont:obrien a ont:Author .
+
+ont:oeschemmel a ont:Author .
+
+ont:olga_galiperez a ont:Author .
+
+ont:oriana_comesanha a ont:Author .
+
+ont:p_alencar a ont:Author .
+
+ont:panagiotis_koulouvarisb a ont:Author .
+
+ont:paula_coelho_santos a ont:Author .
+
+ont:peng_xiong a ont:Author .
+
+ont:pradeep_raj a ont:Author .
+
+ont:prakriti a ont:Author .
+
+ont:pranathi_ayyalaraju_ramalakshmi a ont:Author .
+
+ont:premarathne a ont:Author .
+
+ont:qi_zhao a ont:Author .
+
+ont:r_m a ont:Author .
+
+ont:r_v_santos a ont:Author .
+
+ont:rachel_kim a ont:Author .
+
+ont:rachel_l_dumont a ont:Author .
+
+ont:raez a ont:Author .
+
+ont:ralf_w a ont:Author .
+
+ont:ralf_w_schlosser a ont:Author .
+
+ont:raphael_comesanha a ont:Author .
+
+ont:raquel_canete_yaque a ont:Author .
+
+ont:resurreccion a ont:Author .
+
+ont:rita a ont:Author .
+
+ont:roberto a ont:Author .
+
+ont:ron a ont:Author .
+
+ont:ron_resurreccion a ont:Author .
+
+ont:rose_nevill a ont:Author .
+
+ont:roseann_c_schaaf a ont:Author .
+
+ont:rossano a ont:Author .
+
+ont:s_dantas a ont:Author .
+
+ont:sagun_sharma a ont:Author .
+
+ont:sandra_magana a ont:Author .
+
+ont:sara a ont:Author .
+
+ont:sarah_dababnah a ont:Author .
+
+ont:sarah_emily_wilson a ont:Author .
+
+ont:schlosser a ont:Author .
+
+ont:sen_toda a ont:Author .
+
+ont:shane a ont:Author .
+
+ont:shanna_k_kattari a ont:Author .
+
+ont:shaun_m_eack a ont:Author .
+
+ont:shelby_morrow a ont:Author .
+
+ont:shi_chen a ont:Author .
+
+ont:silva a ont:Author .
+
+ont:simeao_retalisa a ont:Author .
+
+ont:sobel a ont:Author .
+
+ont:sun a ont:Author .
+
+ont:sungchul_jung a ont:Author .
+
+ont:tamara_dawkins a ont:Author .
+
+ont:tang a ont:Author .
+
+ont:tania_chasiotoua a ont:Author .
+
+ont:temple_lovelace a ont:Author .
+
+ont:theodoros_daviotisb a ont:Author .
+
+ont:thomsen a ont:Author .
+
+ont:tikia_watkins a ont:Author .
+
+ont:tooacba a ont:Author .
+
+ont:tracy_j_raulston a ont:Author .
+
+ont:uttama a ont:Author .
+
+ont:valeria_aloizoua a ont:Author .
+
+ont:veronica a ont:Author .
+
+ont:vitor_matias a ont:Author .
+
+ont:weixin_yang a ont:Author .
+
+ont:wenkai a ont:Author .
+
+ont:william a ont:Author .
+
+ont:william_de_paula_ferreira a ont:Author .
+
+ont:william_therrien a ont:Author .
+
+ont:written_by a owl:ObjectProperty ;
+    rdfs:comment "Indicates the author(s) of a publication"@en ;
+    rdfs:domain ont:Publication ;
+    rdfs:range ont:Author .
+
+ont:xi_li a ont:Author .
+
+ont:xiao_yang a ont:Author .
+
+ont:xin a ont:Author .
+
+ont:xing_wei a ont:Author .
+
+ont:xinzhu a ont:Author .
+
+ont:yang a ont:Author .
+
+ont:yao a ont:Author .
+
+ont:yaqing_chai a ont:Author .
+
+ont:yi_alegria_li a ont:Author .
+
+ont:yilin a ont:Author .
+
+ont:yuhan_chen a ont:Author .
+
+ont:zhihao_lin a ont:Author .
+
+ont:zhuoren_zhou a ont:Author .
+
+ont:zixia_zheng a ont:Author .
+
+ont:ziyu a ont:Author .
+
+ont:Institution a owl:Class ;
+    rdfs:label "Institution"@en ;
+    rdfs:comment "Academic or research organization"@en .
+
+ont:abdelmohsen a ont:Author .
+
+ont:arafa a ont:Author .
+
+ont:christianne_marie a ont:Author .
+
+ont:conor a ont:Author .
+
+ont:ethel a ont:Author .
+
+ont:gagan a ont:Author .
+
+ont:ivy a ont:Author .
+
+ont:keighrey a ont:Author .
+
+ont:maha a ont:Author .
+
+ont:matias a ont:Author .
+
+ont:murray a ont:Author .
+
+ont:niall a ont:Author .
+
+ont:ong a ont:Author .
+
+ont:tan a ont:Author .
+
+ont:vinco a ont:Author .
+
+ont:yasmine a ont:Author .
+
+ont:yu a ont:Author .
+
+ont:yujing a ont:Author .
+
+ont:zhang a ont:Author .
+
+ont:Geolocalization a owl:DatatypeProperty ;
+    rdfs:domain ont:Data .
+
+ont:Topics a owl:Class ;
+    rdfs:label "Topics"@en ;
+    rdfs:comment "Thematic area or subject of a publication"@en .
+
+ont:Venue a owl:Class ;
+    rdfs:label "Venue"@en ;
+    rdfs:comment "Journal, conference or platform where publications are disseminated"@en .
+
+ont:Software a owl:Class ;
+    rdfs:label "Software"@en ;
+    rdfs:comment "Computer programs developed for research"@en .
+
+ont:Data a owl:Class ;
+    rdfs:label "Data"@en ;
+    rdfs:comment "Data associated with scientific publications"@en .
+
+ont:Publication a owl:Class ;
+    rdfs:label "Publication"@en ;
+    rdfs:comment "Article, paper or academic work published in scientific venues"@en .
+
+ont:Author a owl:Class ;
+    rdfs:label "Author"@en ;
+    rdfs:comment "Person who writes or contributes to scientific publications"@en .
+

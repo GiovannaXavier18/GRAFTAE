@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/"
+     xml:base="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#authored -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#authored">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/written_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:comment xml:lang="en">Indicates that an author wrote or contributed to a publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#chairs_or_reviewer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#chairs_or_reviewer">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Venue"/>
+        <rdfs:comment xml:lang="en">Indicates that an author chairs or reviews for a venue (conference/journal)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_affiliation_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_affiliation_with">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/is_affiliated_in"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Institution"/>
+        <rdfs:comment xml:lang="en">Links an author to their affiliated institution</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_citation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_citation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:comment xml:lang="en">Indicates that a publication cites another publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_doi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_doi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#DOI"/>
+        <rdfs:comment xml:lang="en">Links a publication to its Digital Object Identifier (DOI)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_summary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_summary">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Summary"/>
+        <rdfs:comment xml:lang="en">Links a publication to its textual summary/abstract</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_thematic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#has_thematic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Thematic"/>
+        <rdfs:comment xml:lang="en">Indicates the primary thematic category of a publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#hosts_venue -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#hosts_venue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Institution"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Venue"/>
+        <rdfs:comment xml:lang="en">Indicates that an institution hosts a conference/journal</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/co_topics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/co_topics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Topics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Topics"/>
+        <rdfs:comment xml:lang="en">Indicates a semantic relationship between research topics</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_coauthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_coauthor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:comment xml:lang="en">Links an author to their collaborators</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_issn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_issn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ISSN"/>
+        <rdfs:comment xml:lang="en">Links a publication to its International Standard Serial Number</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_orcid -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_orcid">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ORCID"/>
+        <rdfs:comment xml:lang="en">Links an author to their ORCID identifier</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_topics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/has_topics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Topics"/>
+        <rdfs:comment xml:lang="en">Links a publication to its research topics</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/is_affiliated_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/is_affiliated_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Affiliation"/>
+        <rdfs:comment xml:lang="en">Indicates an author&apos;s institutional affiliation</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/is_published_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/is_published_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Venue"/>
+        <rdfs:comment xml:lang="en">Links a publication to its venue (journal/conference)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/written_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/written_by">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author"/>
+        <rdfs:comment xml:lang="en">Indicates the author(s) of a publication</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Programming_Language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Programming_Language">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Box -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Box">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Geolocalization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Code_Repository_Url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Code_Repository_Url">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Software"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Documentation_Urls -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Documentation_Urls">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Software"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Formato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Formato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Geolocalization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Geolocalization">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Place -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Place">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Geolocalization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Point -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Point">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Geolocalization"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Size">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Version">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#DOI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#DOI">
+        <rdfs:comment xml:lang="en">Persistent identifier for digital content</rdfs:comment>
+        <rdfs:label xml:lang="en">DOI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Summary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Summary">
+        <rdfs:comment xml:lang="en">Concise description of a publication&apos;s content</rdfs:comment>
+        <rdfs:label xml:lang="en">Abstract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Thematic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25#Thematic">
+        <rdfs:comment xml:lang="en">Primary thematic classification of a publication</rdfs:comment>
+        <rdfs:label xml:lang="en">Thematic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Affiliation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Affiliation">
+        <rdfs:comment xml:lang="en">Formal relationship between an author and an institution</rdfs:comment>
+        <rdfs:label xml:lang="en">Affiliation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Author">
+        <rdfs:comment xml:lang="en">Person who writes or contributes to scientific publications</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Data">
+        <rdfs:comment xml:lang="en">Data associated with scientific publications</rdfs:comment>
+        <rdfs:label xml:lang="en">Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ISSN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ISSN">
+        <rdfs:comment xml:lang="en">Unique identifier for journals and periodicals</rdfs:comment>
+        <rdfs:label xml:lang="en">ISSN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Institution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Institution">
+        <rdfs:comment xml:lang="en">Academic or research organization</rdfs:comment>
+        <rdfs:label xml:lang="en">Institution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ORCID -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/ORCID">
+        <rdfs:comment xml:lang="en">Persistent identifier for academic authors</rdfs:comment>
+        <rdfs:label xml:lang="en">ORCID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Publication">
+        <rdfs:comment xml:lang="en">Article, paper or academic work published in scientific venues</rdfs:comment>
+        <rdfs:label xml:lang="en">Publication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Software">
+        <rdfs:comment xml:lang="en">Computer programs developed for research</rdfs:comment>
+        <rdfs:label xml:lang="en">Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Topics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Topics">
+        <rdfs:comment xml:lang="en">Thematic area or subject of a publication</rdfs:comment>
+        <rdfs:label xml:lang="en">Topics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Venue -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/xavie/ontologies/2025/2/untitled-ontology-25/Venue">
+        <rdfs:comment xml:lang="en">Journal, conference or platform where publications are disseminated</rdfs:comment>
+        <rdfs:label xml:lang="en">Venue</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
