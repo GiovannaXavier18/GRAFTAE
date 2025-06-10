@@ -25,3 +25,17 @@ Para mapear e adicionar instâncias ao grafo, desenvolvemos um script em linguag
 
 ### 5ª Etapa: Enriquecendo o GRAFTAE
 Para enriquecer o GRAFTEA com dados na temática, utilizamos a plataforma Zenodo.org. Por meio de uma API disponível na plataforma, os dados foram mapeados para o GRAFTEA. Inicialmente, definiu-se uma consulta com os termos "autism" e "visual support" ou "storytelling", com o objetivo de recuperar publicações relacionadas ao uso de suportes visuais e narrativas digitais no contexto do autismo. Essa consulta foi executada por meio de uma requisição HTTP, utilizando a biblioteca requests, que retornou os dados em formato JSON.
+
+## Estrutura
+
+- `scripts/gerar_grafo_publicacoes.py`: Lê CSVs com artigos, autores e ferramentas e gera grafo RDF.
+- `scripts/importar_artigos_zenodo.py`: Consulta a API do Zenodo e gera grafo RDF.
+- `data/`: Contém os arquivos CSV de entrada.
+- `output/`: Arquivos RDF gerados no formato Turtle.
+
+## Requisitos
+
+Instale com:
+
+```bash
+pip install -r requirements.txt
